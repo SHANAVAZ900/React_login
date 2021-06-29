@@ -25,7 +25,7 @@ function App() {
 
   const handleLogin = () => {
     clearErrors();
-    fire.auth().signInWithEmailPassword(email,password).catch((err)=>{
+    fire.auth().signInWithEmailAndPassword(email,password).catch((err)=>{
       switch(err.code){
         case "auth/invalid-email":
         case "auth/user-disabled":
@@ -42,7 +42,7 @@ function App() {
 
   const handleSignup =() =>{
     clearErrors();
-    fire.auth().createUserWithEmailPassword(email,password).catch((err)=>{
+    fire.auth().createUserWithEmailAndPassword(email,password).catch((err)=>{
       switch(err.code){
         case "auth/email-already-in-use":
         case "auth/invalid-email":
