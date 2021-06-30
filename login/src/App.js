@@ -3,6 +3,7 @@ import "./App.css"
 import fire from "./fire";
 import Login from './Components/Templates/Login';
 import Hero from './Components/Templates/Hero';
+import '../node_modules/bootstrap/dist/css/bootstrap.css';
 
 function App() {
 
@@ -81,7 +82,7 @@ function App() {
   return (
     <div>
       {user ?(
-        <Hero handleLogout={handleLogout} />
+        <Hero handleLogout={handleLogout} user={user} />
         
       ):(
       <Login 
