@@ -1,4 +1,6 @@
 import React from 'react'
+import FileUpload from '../upload/FileUpload'
+
 
 function Hero({handleLogout,user}) {
 
@@ -10,6 +12,7 @@ function Hero({handleLogout,user}) {
                 <h2>Welcome {username[0]}</h2>
                 <button onClick={handleLogout}>Logout</button>
             </nav>
+            <FileUpload />
         </section>
     )
 }
